@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B76B7C101B0A3A390050CBB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76B7C0F1B0A3A390050CBB9 /* Main.storyboard */; };
+		B7734F0019C82A200030AFC4 /* SimulatorsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7734EFF19C82A200030AFC4 /* SimulatorsController.m */; };
+		B78D972C1B0B330D007ADE32 /* Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D97291B0B330D007ADE32 /* Runtime.m */; };
+		B78D972D1B0B330D007ADE32 /* Simulator.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D972B1B0B330D007ADE32 /* Simulator.m */; };
+		B78D97341B0B8E5C007ADE32 /* SimulatorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D97331B0B8E5C007ADE32 /* SimulatorListViewController.m */; };
+		B7C630D01B0A3B24001C0CBA /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C630CF1B0A3B24001C0CBA /* MainWindowController.m */; };
+		B7CC4CDE19BDB2C600637D3C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CC4CDD19BDB2C600637D3C /* Cocoa.framework */; };
+		B7CC4CE819BDB2C600637D3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7CC4CE619BDB2C600637D3C /* InfoPlist.strings */; };
+		B7CC4CEA19BDB2C600637D3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CC4CE919BDB2C600637D3C /* main.m */; };
+		B7CC4CEE19BDB2C600637D3C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B7CC4CEC19BDB2C600637D3C /* Credits.rtf */; };
+		B7CC4CF119BDB2C600637D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CC4CF019BDB2C600637D3C /* AppDelegate.m */; };
+		B7CC4CF419BDB2C600637D3C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CC4CF219BDB2C600637D3C /* MainMenu.xib */; };
+		B7CC4CF619BDB2C600637D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CC4CF519BDB2C600637D3C /* Images.xcassets */; };
+		B7CC4CFD19BDB2C600637D3C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CC4CFC19BDB2C600637D3C /* XCTest.framework */; };
+		B7CC4CFE19BDB2C600637D3C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CC4CDD19BDB2C600637D3C /* Cocoa.framework */; };
+		B7CC4D0619BDB2C600637D3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7CC4D0419BDB2C600637D3C /* InfoPlist.strings */; };
+		B7CC4D0819BDB2C600637D3C /* SimulatorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CC4D0719BDB2C600637D3C /* SimulatorsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7CC4CFF19BDB2C600637D3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7CC4CD219BDB2C600637D3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7CC4CD919BDB2C600637D3C;
+			remoteInfo = Simulators;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B76B7C0F1B0A3A390050CBB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B7734EFE19C82A200030AFC4 /* SimulatorsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatorsController.h; sourceTree = "<group>"; };
+		B7734EFF19C82A200030AFC4 /* SimulatorsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulatorsController.m; sourceTree = "<group>"; };
+		B78D97281B0B330D007ADE32 /* Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Runtime.h; sourceTree = "<group>"; };
+		B78D97291B0B330D007ADE32 /* Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Runtime.m; sourceTree = "<group>"; };
+		B78D972A1B0B330D007ADE32 /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simulator.h; sourceTree = "<group>"; };
+		B78D972B1B0B330D007ADE32 /* Simulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simulator.m; sourceTree = "<group>"; };
+		B78D97321B0B8E5C007ADE32 /* SimulatorListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatorListViewController.h; sourceTree = "<group>"; };
+		B78D97331B0B8E5C007ADE32 /* SimulatorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulatorListViewController.m; sourceTree = "<group>"; };
+		B7C630CE1B0A3B24001C0CBA /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		B7C630CF1B0A3B24001C0CBA /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		B7CC4CDA19BDB2C600637D3C /* Simulators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulators.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7CC4CDD19BDB2C600637D3C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B7CC4CE019BDB2C600637D3C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B7CC4CE119BDB2C600637D3C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B7CC4CE219BDB2C600637D3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B7CC4CE519BDB2C600637D3C /* Simulators-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simulators-Info.plist"; sourceTree = "<group>"; };
+		B7CC4CE719BDB2C600637D3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B7CC4CE919BDB2C600637D3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B7CC4CEB19BDB2C600637D3C /* Simulators-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simulators-Prefix.pch"; sourceTree = "<group>"; };
+		B7CC4CED19BDB2C600637D3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B7CC4CEF19BDB2C600637D3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B7CC4CF019BDB2C600637D3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B7CC4CF319BDB2C600637D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B7CC4CF519BDB2C600637D3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B7CC4CFB19BDB2C600637D3C /* SimulatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7CC4CFC19BDB2C600637D3C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B7CC4D0319BDB2C600637D3C /* SimulatorsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulatorsTests-Info.plist"; sourceTree = "<group>"; };
+		B7CC4D0519BDB2C600637D3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B7CC4D0719BDB2C600637D3C /* SimulatorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulatorsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7CC4CD719BDB2C600637D3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7CC4CDE19BDB2C600637D3C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7CC4CF819BDB2C600637D3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7CC4CFE19BDB2C600637D3C /* Cocoa.framework in Frameworks */,
+				B7CC4CFD19BDB2C600637D3C /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B78D97271B0B330D007ADE32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B78D97281B0B330D007ADE32 /* Runtime.h */,
+				B78D97291B0B330D007ADE32 /* Runtime.m */,
+				B78D972A1B0B330D007ADE32 /* Simulator.h */,
+				B78D972B1B0B330D007ADE32 /* Simulator.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B78D97311B0B8E5C007ADE32 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B78D97321B0B8E5C007ADE32 /* SimulatorListViewController.h */,
+				B78D97331B0B8E5C007ADE32 /* SimulatorListViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B7CC4CD119BDB2C600637D3C = {
+			isa = PBXGroup;
+			children = (
+				B7CC4CE319BDB2C600637D3C /* Simulators */,
+				B7CC4D0119BDB2C600637D3C /* SimulatorsTests */,
+				B7CC4CDC19BDB2C600637D3C /* Frameworks */,
+				B7CC4CDB19BDB2C600637D3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7CC4CDB19BDB2C600637D3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC4CDA19BDB2C600637D3C /* Simulators.app */,
+				B7CC4CFB19BDB2C600637D3C /* SimulatorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7CC4CDC19BDB2C600637D3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC4CDD19BDB2C600637D3C /* Cocoa.framework */,
+				B7CC4CFC19BDB2C600637D3C /* XCTest.framework */,
+				B7CC4CDF19BDB2C600637D3C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7CC4CDF19BDB2C600637D3C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC4CE019BDB2C600637D3C /* AppKit.framework */,
+				B7CC4CE119BDB2C600637D3C /* CoreData.framework */,
+				B7CC4CE219BDB2C600637D3C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B7CC4CE319BDB2C600637D3C /* Simulators */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC4CEF19BDB2C600637D3C /* AppDelegate.h */,
+				B7CC4CF019BDB2C600637D3C /* AppDelegate.m */,
+				B78D97271B0B330D007ADE32 /* Models */,
+				B78D97311B0B8E5C007ADE32 /* ViewControllers */,
+				B7CC4CF219BDB2C600637D3C /* MainMenu.xib */,
+				B76B7C0F1B0A3A390050CBB9 /* Main.storyboard */,
+				B7734EFE19C82A200030AFC4 /* SimulatorsController.h */,
+				B7734EFF19C82A200030AFC4 /* SimulatorsController.m */,
+				B7C630CE1B0A3B24001C0CBA /* MainWindowController.h */,
+				B7C630CF1B0A3B24001C0CBA /* MainWindowController.m */,
+				B7CC4CF519BDB2C600637D3C /* Images.xcassets */,
+				B7CC4CE419BDB2C600637D3C /* Supporting Files */,
+			);
+			path = Simulators;
+			sourceTree = "<group>";
+		};
+		B7CC4CE419BDB2C600637D3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC4CE519BDB2C600637D3C /* Simulators-Info.plist */,
+				B7CC4CE619BDB2C600637D3C /* InfoPlist.strings */,
+				B7CC4CE919BDB2C600637D3C /* main.m */,
+				B7CC4CEB19BDB2C600637D3C /* Simulators-Prefix.pch */,
+				B7CC4CEC19BDB2C600637D3C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7CC4D0119BDB2C600637D3C /* SimulatorsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC4D0719BDB2C600637D3C /* SimulatorsTests.m */,
+				B7CC4D0219BDB2C600637D3C /* Supporting Files */,
+			);
+			path = SimulatorsTests;
+			sourceTree = "<group>";
+		};
+		B7CC4D0219BDB2C600637D3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC4D0319BDB2C600637D3C /* SimulatorsTests-Info.plist */,
+				B7CC4D0419BDB2C600637D3C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7CC4CD919BDB2C600637D3C /* Simulators */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7CC4D0B19BDB2C600637D3C /* Build configuration list for PBXNativeTarget "Simulators" */;
+			buildPhases = (
+				B7CC4CD619BDB2C600637D3C /* Sources */,
+				B7CC4CD719BDB2C600637D3C /* Frameworks */,
+				B7CC4CD819BDB2C600637D3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Simulators;
+			productName = Simulators;
+			productReference = B7CC4CDA19BDB2C600637D3C /* Simulators.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7CC4CFA19BDB2C600637D3C /* SimulatorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7CC4D0E19BDB2C600637D3C /* Build configuration list for PBXNativeTarget "SimulatorsTests" */;
+			buildPhases = (
+				B7CC4CF719BDB2C600637D3C /* Sources */,
+				B7CC4CF819BDB2C600637D3C /* Frameworks */,
+				B7CC4CF919BDB2C600637D3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7CC4D0019BDB2C600637D3C /* PBXTargetDependency */,
+			);
+			name = SimulatorsTests;
+			productName = SimulatorsTests;
+			productReference = B7CC4CFB19BDB2C600637D3C /* SimulatorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7CC4CD219BDB2C600637D3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Vitaly Dyachkov";
+				TargetAttributes = {
+					B7CC4CFA19BDB2C600637D3C = {
+						TestTargetID = B7CC4CD919BDB2C600637D3C;
+					};
+				};
+			};
+			buildConfigurationList = B7CC4CD519BDB2C600637D3C /* Build configuration list for PBXProject "Simulators" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7CC4CD119BDB2C600637D3C;
+			productRefGroup = B7CC4CDB19BDB2C600637D3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7CC4CD919BDB2C600637D3C /* Simulators */,
+				B7CC4CFA19BDB2C600637D3C /* SimulatorsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7CC4CD819BDB2C600637D3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7CC4CE819BDB2C600637D3C /* InfoPlist.strings in Resources */,
+				B76B7C101B0A3A390050CBB9 /* Main.storyboard in Resources */,
+				B7CC4CF619BDB2C600637D3C /* Images.xcassets in Resources */,
+				B7CC4CEE19BDB2C600637D3C /* Credits.rtf in Resources */,
+				B7CC4CF419BDB2C600637D3C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7CC4CF919BDB2C600637D3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7CC4D0619BDB2C600637D3C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7CC4CD619BDB2C600637D3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C630D01B0A3B24001C0CBA /* MainWindowController.m in Sources */,
+				B7734F0019C82A200030AFC4 /* SimulatorsController.m in Sources */,
+				B78D972C1B0B330D007ADE32 /* Runtime.m in Sources */,
+				B7CC4CF119BDB2C600637D3C /* AppDelegate.m in Sources */,
+				B78D972D1B0B330D007ADE32 /* Simulator.m in Sources */,
+				B7CC4CEA19BDB2C600637D3C /* main.m in Sources */,
+				B78D97341B0B8E5C007ADE32 /* SimulatorListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7CC4CF719BDB2C600637D3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7CC4D0819BDB2C600637D3C /* SimulatorsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7CC4D0019BDB2C600637D3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7CC4CD919BDB2C600637D3C /* Simulators */;
+			targetProxy = B7CC4CFF19BDB2C600637D3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7CC4CE619BDB2C600637D3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7CC4CE719BDB2C600637D3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B7CC4CEC19BDB2C600637D3C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7CC4CED19BDB2C600637D3C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B7CC4CF219BDB2C600637D3C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7CC4CF319BDB2C600637D3C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		B7CC4D0419BDB2C600637D3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7CC4D0519BDB2C600637D3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7CC4D0919BDB2C600637D3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B7CC4D0A19BDB2C600637D3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B7CC4D0C19BDB2C600637D3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simulators/Simulators-Prefix.pch";
+				INFOPLIST_FILE = "Simulators/Simulators-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B7CC4D0D19BDB2C600637D3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simulators/Simulators-Prefix.pch";
+				INFOPLIST_FILE = "Simulators/Simulators-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B7CC4D0F19BDB2C600637D3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Simulators.app/Contents/MacOS/Simulators";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simulators/Simulators-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SimulatorsTests/SimulatorsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B7CC4D1019BDB2C600637D3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Simulators.app/Contents/MacOS/Simulators";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simulators/Simulators-Prefix.pch";
+				INFOPLIST_FILE = "SimulatorsTests/SimulatorsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7CC4CD519BDB2C600637D3C /* Build configuration list for PBXProject "Simulators" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7CC4D0919BDB2C600637D3C /* Debug */,
+				B7CC4D0A19BDB2C600637D3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7CC4D0B19BDB2C600637D3C /* Build configuration list for PBXNativeTarget "Simulators" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7CC4D0C19BDB2C600637D3C /* Debug */,
+				B7CC4D0D19BDB2C600637D3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7CC4D0E19BDB2C600637D3C /* Build configuration list for PBXNativeTarget "SimulatorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7CC4D0F19BDB2C600637D3C /* Debug */,
+				B7CC4D1019BDB2C600637D3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7CC4CD219BDB2C600637D3C /* Project object */;
+}
