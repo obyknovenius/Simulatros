@@ -697,13 +697,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="36" horizontalPageScroll="10" verticalLineScroll="36" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGn-X9-beO">
-                                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="275"/>
                                         <clipView key="contentView" drawsBackground="NO" id="0Cl-Sd-n00">
                                             <rect key="frame" x="1" y="1" width="148" height="398"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <outlineView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="34" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="csl-QW-SpC" id="Tvu-QF-QH6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="448" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="450" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -739,12 +739,12 @@
                                                                         <outlet property="textField" destination="NPS-kV-qEm" id="Bue-5P-aP5"/>
                                                                     </connections>
                                                                 </tableCellView>
-                                                                <tableCellView identifier="SimulatorCell" id="mqT-JL-GfP">
+                                                                <tableCellView identifier="SimulatorCell" id="mqT-JL-GfP" customClass="SimulatorCell">
                                                                     <rect key="frame" x="1" y="20" width="447" height="34"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <imageView translatesAutoresizingMaskIntoConstraints="NO" id="jgD-yB-XwG">
-                                                                            <rect key="frame" x="20" y="9" width="16" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="9" width="16" height="16"/>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Simulator" id="VcF-yY-2ps"/>
                                                                         </imageView>
                                                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-a0-iaq">
@@ -757,11 +757,12 @@
                                                                         </textField>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="jgD-yB-XwG" firstAttribute="leading" secondItem="mqT-JL-GfP" secondAttribute="leading" constant="20" symbolic="YES" id="8dM-47-4WS"/>
+                                                                        <constraint firstItem="jgD-yB-XwG" firstAttribute="leading" secondItem="mqT-JL-GfP" secondAttribute="leading" id="8dM-47-4WS"/>
                                                                         <constraint firstAttribute="centerY" secondItem="jgD-yB-XwG" secondAttribute="centerY" id="se5-s1-WVV"/>
                                                                     </constraints>
                                                                     <connections>
                                                                         <outlet property="imageView" destination="jgD-yB-XwG" id="pZG-fq-xpp"/>
+                                                                        <outlet property="nameTextField" destination="JC3-a0-iaq" id="mcG-Kr-63E"/>
                                                                         <outlet property="textField" destination="JC3-a0-iaq" id="DHL-CL-now"/>
                                                                     </connections>
                                                                 </tableCellView>
@@ -790,7 +791,7 @@
                                     <constraint firstAttribute="trailing" secondItem="OGn-X9-beO" secondAttribute="trailing" id="2LW-WM-08I"/>
                                     <constraint firstItem="OGn-X9-beO" firstAttribute="leading" secondItem="SeG-zu-j2Y" secondAttribute="leading" id="3fs-46-pqY"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="484-JZ-Edf"/>
-                                    <constraint firstItem="OGn-X9-beO" firstAttribute="top" secondItem="SeG-zu-j2Y" secondAttribute="top" id="I3K-ks-2xJ"/>
+                                    <constraint firstItem="OGn-X9-beO" firstAttribute="top" secondItem="SeG-zu-j2Y" secondAttribute="top" constant="25" id="I3K-ks-2xJ"/>
                                     <constraint firstAttribute="bottom" secondItem="OGn-X9-beO" secondAttribute="bottom" id="pYo-ke-53g"/>
                                 </constraints>
                             </visualEffectView>

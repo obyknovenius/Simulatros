@@ -10,4 +10,12 @@
 
 @implementation Runtime
 
+- (instancetype)initWithBundle:(NSBundle *)bundle {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 @end

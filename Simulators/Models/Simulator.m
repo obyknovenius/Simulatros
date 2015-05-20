@@ -10,13 +10,12 @@
 
 @implementation Simulator
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
-{
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
         self.UDID = [[NSUUID alloc] initWithUUIDString:dictionary[@"UDID"]];
         self.deviceType = dictionary[@"deviceType"];
-        self.name = dictionary[@"Name"];
+        self.name = dictionary[@"name"];
         self.runtime = dictionary[@"runtime"];
         self.state = dictionary[@"state"];
     }

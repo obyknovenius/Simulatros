@@ -8,11 +8,14 @@
 
 #import "SimulatorListViewController.h"
 
+#import "SimulatorCell.h"
+
 #import "Simulator.h"
 
 @interface SimulatorListViewController () <NSOutlineViewDataSource, NSOutlineViewDelegate>
 
 @property (nonatomic, strong) NSArray *simulators;
+@property (nonatomic, strong) NSDictionary *runtimes;
 
 @property (weak) IBOutlet NSOutlineView *outletView;
 
@@ -23,10 +26,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    // Getting simulators
     NSString *userLibraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
     NSString *devicesPath = [userLibraryPath stringByAppendingPathComponent:@"Developer/CoreSimulator/Devices"];
     
-    NSFileManager *fileManager = [NSFileManager defaultManager];
     NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtPath:devicesPath];
     
     NSMutableArray *simulators = [[NSMutableArray alloc] init];
@@ -46,6 +51,28 @@
     
     self.simulators = [simulators copy];
     
+//    // Getting runtimes
+//    NSString *runtimesPath = @"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/CoreSimulator/Profiles/Runtimes";
+//    
+//    NSArray *runtimePathes = [fileManager contentsOfDirectoryAtPath:runtimesPath error:nil];
+//    
+//    NSMutableArray *runtimes = [[NSMutableArray alloc] init];
+//    
+//    for (NSString *subpath in runtimePathes) {
+//        NSString *runtimePath = [runtimesPath stringByAppendingPathComponent:subpath];
+//        
+//        NSBundle *bundle = [NSBundle bundleWithPath:runtimePath];
+//        NSDictionary *bundleInfo = [bundle infoDictionary];
+//        
+//        Runtime *runtime = [[Runtime alloc] init];
+//        runtime.bundleIdentifier = bundleInfo[@"CFBundleIdentifier"];
+//        runtime.bundleName = bundleInfo[@"CFBundleName"];
+//        
+//        [runtimes addObject:runtime];
+//    }
+//    
+//    _runtimes = runtimes;
+    
     self.outletView.floatsGroupRows = NO;
 }
 
@@ -61,14 +88,14 @@
 
 - (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item {
     if (!item) {
-        return @"iOS 7";
+        return self.simulators;
     }
     
     return self.simulators[index];
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
-    if ([item isKindOfClass:[NSString class]]) {
+    if (item == self.simulators) {
         return YES;
     }
     
@@ -76,22 +103,23 @@
 }
 
 - (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item {
-    NSTableCellView *cell = nil;
-    
-    if ([item isKindOfClass:[NSString class]]) {
-        cell = [outlineView makeViewWithIdentifier:@"HeaderCell" owner:self];
-//        cell.textField.stringValue = item;
+    if (item == self.simulators) {
+        NSTableCellView *cell = [outlineView makeViewWithIdentifier:@"HeaderCell" owner:self];
+        cell.textField.stringValue = @"SIMULATORS";
+        return cell;
     } else {
-        cell = [outlineView makeViewWithIdentifier:@"SimulatorCell" owner:self];
+        SimulatorCell *cell = [outlineView makeViewWithIdentifier:@"SimulatorCell" owner:self];
         Simulator *simulator = (Simulator *)item;
-//        cell.textField.stringValue = [NSString stringWithFormat:@"%@ (%@)", simulator.name, simulator.runtime.bundleName];
+        cell.nameTextField.stringValue = simulator.name;
+//        cell.nameTextField.stringValue = [NSString stringWithFormat:@"%@ (%@)", simulator.name, simulator.runtime.bundleName];
+        return cell;
     }
     
-    return cell;
+    return nil;
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item {
-    if ([item isKindOfClass:[NSString class]]) {
+    if (item == self.simulators) {
         return YES;
     }
     
@@ -99,7 +127,7 @@
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item {
-    if ([item isKindOfClass:[NSString class]]) {
+    if (item == self.simulators) {
         return NO;
     }
     
@@ -107,7 +135,7 @@
 }
 
 - (CGFloat)outlineView:(NSOutlineView *)outlineView heightOfRowByItem:(id)item {
-    if ([item isKindOfClass:[NSString class]]) {
+    if (item == self.simulators) {
         return 17.0f;
     }
     

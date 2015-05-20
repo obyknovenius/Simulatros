@@ -10,6 +10,8 @@
 
 @interface Runtime : NSObject
 
+- (instancetype)initWithBundle:(NSBundle *)bundle;
+
 @property (copy) NSString *bundleIdentifier;
 @property (copy) NSString *bundleName;
 

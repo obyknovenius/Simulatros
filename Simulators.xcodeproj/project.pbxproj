@@ -12,6 +12,7 @@
 		B78D972C1B0B330D007ADE32 /* Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D97291B0B330D007ADE32 /* Runtime.m */; };
 		B78D972D1B0B330D007ADE32 /* Simulator.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D972B1B0B330D007ADE32 /* Simulator.m */; };
 		B78D97341B0B8E5C007ADE32 /* SimulatorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D97331B0B8E5C007ADE32 /* SimulatorListViewController.m */; };
+		B78D97441B0C7489007ADE32 /* SimulatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D97421B0C7489007ADE32 /* SimulatorCell.m */; };
 		B7C630D01B0A3B24001C0CBA /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C630CF1B0A3B24001C0CBA /* MainWindowController.m */; };
 		B7CC4CDE19BDB2C600637D3C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CC4CDD19BDB2C600637D3C /* Cocoa.framework */; };
 		B7CC4CE819BDB2C600637D3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7CC4CE619BDB2C600637D3C /* InfoPlist.strings */; };
@@ -46,6 +47,8 @@
 		B78D972B1B0B330D007ADE32 /* Simulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Simulator.m; sourceTree = "<group>"; };
 		B78D97321B0B8E5C007ADE32 /* SimulatorListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatorListViewController.h; sourceTree = "<group>"; };
 		B78D97331B0B8E5C007ADE32 /* SimulatorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulatorListViewController.m; sourceTree = "<group>"; };
+		B78D97411B0C7489007ADE32 /* SimulatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatorCell.h; sourceTree = "<group>"; };
+		B78D97421B0C7489007ADE32 /* SimulatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulatorCell.m; sourceTree = "<group>"; };
 		B7C630CE1B0A3B24001C0CBA /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		B7C630CF1B0A3B24001C0CBA /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		B7CC4CDA19BDB2C600637D3C /* Simulators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulators.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +113,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		B78D973E1B0C7489007ADE32 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B78D97411B0C7489007ADE32 /* SimulatorCell.h */,
+				B78D97421B0C7489007ADE32 /* SimulatorCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B7CC4CD119BDB2C600637D3C = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +168,7 @@
 				B7CC4CF019BDB2C600637D3C /* AppDelegate.m */,
 				B78D97271B0B330D007ADE32 /* Models */,
 				B78D97311B0B8E5C007ADE32 /* ViewControllers */,
+				B78D973E1B0C7489007ADE32 /* Views */,
 				B7CC4CF219BDB2C600637D3C /* MainMenu.xib */,
 				B76B7C0F1B0A3A390050CBB9 /* Main.storyboard */,
 				B7734EFE19C82A200030AFC4 /* SimulatorsController.h */,
@@ -301,6 +314,7 @@
 				B7734F0019C82A200030AFC4 /* SimulatorsController.m in Sources */,
 				B78D972C1B0B330D007ADE32 /* Runtime.m in Sources */,
 				B7CC4CF119BDB2C600637D3C /* AppDelegate.m in Sources */,
+				B78D97441B0C7489007ADE32 /* SimulatorCell.m in Sources */,
 				B78D972D1B0B330D007ADE32 /* Simulator.m in Sources */,
 				B7CC4CEA19BDB2C600637D3C /* main.m in Sources */,
 				B78D97341B0B8E5C007ADE32 /* SimulatorListViewController.m in Sources */,
