@@ -17,8 +17,7 @@
 @property (copy) NSString *name;
 @property (strong) NSNumber *state;
 @property (copy) NSString *path;
-
-@property (strong) Runtime *runtime;
+@property (copy) NSString *runtime;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

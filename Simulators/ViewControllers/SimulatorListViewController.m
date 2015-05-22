@@ -11,6 +11,7 @@
 #import "SimulatorCell.h"
 
 #import "Simulator.h"
+#import "Runtime.h"
 
 @interface SimulatorListViewController () <NSOutlineViewDataSource, NSOutlineViewDelegate>
 
@@ -51,6 +52,12 @@
     
     self.simulators = [simulators copy];
     
+    NSMutableDictionary *runtimes = [[NSMutableDictionary alloc] init];
+    for (Runtime *runtime in [Runtime supportedRuntimes]) {
+        [runtimes setObject:runtime forKey:runtime.identifier];
+    }
+    self.runtimes = [runtimes copy];
+    
 //    // Getting runtimes
 //    NSString *runtimesPath = @"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/CoreSimulator/Profiles/Runtimes";
 //    
@@ -74,6 +81,7 @@
 //    _runtimes = runtimes;
     
     self.outletView.floatsGroupRows = NO;
+    self.outletView.indentationPerLevel = 0.0f;
 }
 
 #pragma mark - Outline data source
@@ -110,8 +118,9 @@
     } else {
         SimulatorCell *cell = [outlineView makeViewWithIdentifier:@"SimulatorCell" owner:self];
         Simulator *simulator = (Simulator *)item;
+        Runtime *runtime = self.runtimes[simulator.runtime];
         cell.nameTextField.stringValue = simulator.name;
-//        cell.nameTextField.stringValue = [NSString stringWithFormat:@"%@ (%@)", simulator.name, simulator.runtime.bundleName];
+        cell.nameTextField.stringValue = [NSString stringWithFormat:@"%@ (%@)", simulator.name, runtime.buildVersion];
         return cell;
     }
     

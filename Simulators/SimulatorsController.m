@@ -42,12 +42,12 @@
    for (NSString *subpath in runtimePathes) {
       NSString *runtimePath = [runtimesPath stringByAppendingPathComponent:subpath];
       
-      NSBundle *bundle = [NSBundle bundleWithPath:runtimePath];
-      NSDictionary *bundleInfo = [bundle infoDictionary];
+//      NSBundle *bundle = [NSBundle bundleWithPath:runtimePath];
+//      NSDictionary *bundleInfo = [bundle infoDictionary];
       
       Runtime *runtime = [[Runtime alloc] init];
-      runtime.bundleIdentifier = bundleInfo[@"CFBundleIdentifier"];
-      runtime.bundleName = bundleInfo[@"CFBundleName"];
+//      runtime.bundleIdentifier = bundleInfo[@"CFBundleIdentifier"];
+//      runtime.bundleName = bundleInfo[@"CFBundleName"];
       
       [runtimes addObject:runtime];
    }
@@ -57,43 +57,43 @@
 
 - (void)fillSimulators
 {
-   NSString *userLibraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
-   NSString *devicesPath = [userLibraryPath stringByAppendingPathComponent:@"Developer/CoreSimulator/Devices"];
-   
-   NSFileManager *fileManager = [NSFileManager defaultManager];
-   NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtPath:devicesPath];
-   
-   NSMutableArray *simulators = [[NSMutableArray alloc] init];
-   NSString *path;
-   while (path = [enumerator nextObject]) {
-      NSString *simulatorPath = [devicesPath stringByAppendingPathComponent:path];
-      BOOL isDir;
-      if ([fileManager fileExistsAtPath:simulatorPath isDirectory:&isDir] && isDir) {
-         NSString *plistPath = [simulatorPath stringByAppendingPathComponent:@"device.plist"];
-         if ([fileManager fileExistsAtPath:plistPath]) {
-            Simulator *simulator = [[Simulator alloc] init];
-            
-            simulator.path = simulatorPath;
-            
-            NSDictionary *simulatorDict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
-            simulator.UDID = simulatorDict[@"UDID"];
-            simulator.deviceType = simulatorDict[@"deviceType"];
-            simulator.name = simulatorDict[@"name"];
-            simulator.state = simulatorDict[@"state"];
-            
-            for (Runtime *runtime in self.runtimes) {
-               if ([runtime.bundleIdentifier isEqualToString:simulatorDict[@"runtime"]]) {
-                  simulator.runtime = runtime;
-               }
-            }
-            
-            [simulators addObject:simulator];
-         }
-      }
-   }
-   
-   NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-   _simulators = [simulators sortedArrayUsingDescriptors:@[sortDescriptor]];
+//   NSString *userLibraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
+//   NSString *devicesPath = [userLibraryPath stringByAppendingPathComponent:@"Developer/CoreSimulator/Devices"];
+//   
+//   NSFileManager *fileManager = [NSFileManager defaultManager];
+//   NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtPath:devicesPath];
+//   
+//   NSMutableArray *simulators = [[NSMutableArray alloc] init];
+//   NSString *path;
+//   while (path = [enumerator nextObject]) {
+//      NSString *simulatorPath = [devicesPath stringByAppendingPathComponent:path];
+//      BOOL isDir;
+//      if ([fileManager fileExistsAtPath:simulatorPath isDirectory:&isDir] && isDir) {
+//         NSString *plistPath = [simulatorPath stringByAppendingPathComponent:@"device.plist"];
+//         if ([fileManager fileExistsAtPath:plistPath]) {
+//            Simulator *simulator = [[Simulator alloc] init];
+//            
+//            simulator.path = simulatorPath;
+//            
+//            NSDictionary *simulatorDict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+//            simulator.UDID = simulatorDict[@"UDID"];
+//            simulator.deviceType = simulatorDict[@"deviceType"];
+//            simulator.name = simulatorDict[@"name"];
+//            simulator.state = simulatorDict[@"state"];
+//            
+//            for (Runtime *runtime in self.runtimes) {
+//               if ([runtime.bundleIdentifier isEqualToString:simulatorDict[@"runtime"]]) {
+//                  simulator.runtime = runtime;
+//               }
+//            }
+//            
+//            [simulators addObject:simulator];
+//         }
+//      }
+//   }
+//   
+//   NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+//   _simulators = [simulators sortedArrayUsingDescriptors:@[sortDescriptor]];
 }
 
 - (void)awakeFromNib
@@ -155,7 +155,7 @@
     } else {
         cell = [outlineView makeViewWithIdentifier:@"DataCell" owner:self];
         Simulator *simulator = (Simulator *)item;
-        cell.textField.stringValue = [NSString stringWithFormat:@"%@ (%@)", simulator.name, simulator.runtime.bundleName];
+//        cell.textField.stringValue = [NSString stringWithFormat:@"%@ (%@)", simulator.name, simulator.runtime.bundleName];
     }
     
     return cell;

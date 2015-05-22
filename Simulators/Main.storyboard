@@ -744,11 +744,15 @@
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <imageView translatesAutoresizingMaskIntoConstraints="NO" id="jgD-yB-XwG">
-                                                                            <rect key="frame" x="0.0" y="9" width="16" height="16"/>
+                                                                            <rect key="frame" x="12" y="3" width="28" height="28"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="28" id="V5T-R0-EEO"/>
+                                                                                <constraint firstAttribute="height" constant="28" id="pvA-mz-NR9"/>
+                                                                            </constraints>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Simulator" id="VcF-yY-2ps"/>
                                                                         </imageView>
-                                                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-a0-iaq">
-                                                                            <rect key="frame" x="58" y="16" width="89" height="17"/>
+                                                                        <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-a0-iaq">
+                                                                            <rect key="frame" x="38" y="8" width="403" height="17"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="iPhone 6 Plus" id="eaF-EP-7hK">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -757,8 +761,8 @@
                                                                         </textField>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="jgD-yB-XwG" firstAttribute="leading" secondItem="mqT-JL-GfP" secondAttribute="leading" id="8dM-47-4WS"/>
                                                                         <constraint firstAttribute="centerY" secondItem="jgD-yB-XwG" secondAttribute="centerY" id="se5-s1-WVV"/>
+                                                                        <constraint firstItem="jgD-yB-XwG" firstAttribute="leading" secondItem="mqT-JL-GfP" secondAttribute="leading" constant="12" id="yKz-sB-s0C"/>
                                                                     </constraints>
                                                                     <connections>
                                                                         <outlet property="imageView" destination="jgD-yB-XwG" id="pZG-fq-xpp"/>
@@ -777,7 +781,7 @@
                                             </subviews>
                                             <nil key="backgroundColor"/>
                                         </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="5wS-zA-pYR">
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="5wS-zA-pYR">
                                             <rect key="frame" x="1" y="119" width="238" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>

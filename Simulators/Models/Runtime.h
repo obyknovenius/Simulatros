@@ -10,9 +10,15 @@
 
 @interface Runtime : NSObject
 
-- (instancetype)initWithBundle:(NSBundle *)bundle;
++ (NSArray *)supportedRuntimes;
 
-@property (copy) NSString *bundleIdentifier;
-@property (copy) NSString *bundleName;
+- (instancetype)initWithBundle:(NSBundle *)bundle;
+- (instancetype)initWithPath:(NSString *)path;
+
+@property (readonly) NSBundle *bundle;
+@property (readonly) NSString *identifier;
+
+@property (readonly) NSString *version;
+@property (readonly) NSString *buildVersion;
 
 @end
