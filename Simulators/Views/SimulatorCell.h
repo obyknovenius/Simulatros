@@ -11,5 +11,6 @@
 @interface SimulatorCell : NSTableCellView
 
 @property (weak) IBOutlet NSTextField *nameTextField;
+@property (weak) IBOutlet NSTextField *versionTextField;
 
 @end

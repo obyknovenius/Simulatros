@@ -727,7 +727,7 @@
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPS-kV-qEm">
-                                                                            <rect key="frame" x="0.0" y="1" width="145" height="14"/>
+                                                                            <rect key="frame" x="4" y="1" width="145" height="14"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="HEADER CELL" id="Gzt-Dj-2nH">
                                                                                 <font key="font" metaFont="smallSystemBold"/>
                                                                                 <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -751,23 +751,41 @@
                                                                             </constraints>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Simulator" id="VcF-yY-2ps"/>
                                                                         </imageView>
-                                                                        <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-a0-iaq">
-                                                                            <rect key="frame" x="38" y="8" width="403" height="17"/>
+                                                                        <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-a0-iaq">
+                                                                            <rect key="frame" x="46" y="17" width="383" height="14"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="14" id="x0O-QJ-Qjt"/>
+                                                                            </constraints>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="iPhone 6 Plus" id="eaF-EP-7hK">
-                                                                                <font key="font" metaFont="system"/>
+                                                                                <font key="font" metaFont="smallSystem"/>
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                        <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sPW-RQ-Yqd">
+                                                                            <rect key="frame" x="46" y="3" width="383" height="14"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="8.3 (12B411)" id="yN9-D2-iku">
+                                                                                <font key="font" metaFont="smallSystem"/>
+                                                                                <color key="textColor" red="0.52941176470588236" green="0.51764705882352946" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
                                                                     </subviews>
                                                                     <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="sPW-RQ-Yqd" secondAttribute="trailing" constant="20" symbolic="YES" id="OpG-PK-U6o"/>
+                                                                        <constraint firstItem="JC3-a0-iaq" firstAttribute="leading" secondItem="jgD-yB-XwG" secondAttribute="trailing" constant="8" symbolic="YES" id="ZPn-aB-A0k"/>
+                                                                        <constraint firstItem="sPW-RQ-Yqd" firstAttribute="top" secondItem="JC3-a0-iaq" secondAttribute="bottom" id="akq-nF-qe2"/>
+                                                                        <constraint firstItem="sPW-RQ-Yqd" firstAttribute="leading" secondItem="jgD-yB-XwG" secondAttribute="trailing" constant="8" symbolic="YES" id="rin-nO-Sm3"/>
+                                                                        <constraint firstItem="JC3-a0-iaq" firstAttribute="top" secondItem="mqT-JL-GfP" secondAttribute="top" constant="3" id="rvv-3c-QR3"/>
                                                                         <constraint firstAttribute="centerY" secondItem="jgD-yB-XwG" secondAttribute="centerY" id="se5-s1-WVV"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="JC3-a0-iaq" secondAttribute="trailing" constant="20" symbolic="YES" id="t91-6F-BQM"/>
                                                                         <constraint firstItem="jgD-yB-XwG" firstAttribute="leading" secondItem="mqT-JL-GfP" secondAttribute="leading" constant="12" id="yKz-sB-s0C"/>
                                                                     </constraints>
                                                                     <connections>
                                                                         <outlet property="imageView" destination="jgD-yB-XwG" id="pZG-fq-xpp"/>
                                                                         <outlet property="nameTextField" destination="JC3-a0-iaq" id="mcG-Kr-63E"/>
                                                                         <outlet property="textField" destination="JC3-a0-iaq" id="DHL-CL-now"/>
+                                                                        <outlet property="versionTextField" destination="sPW-RQ-Yqd" id="PQy-41-0Nn"/>
                                                                     </connections>
                                                                 </tableCellView>
                                                             </prototypeCellViews>

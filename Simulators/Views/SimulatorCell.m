@@ -10,10 +10,15 @@
 
 @implementation SimulatorCell
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
+- (void)setBackgroundStyle:(NSBackgroundStyle)backgroundStyle {
+    [super setBackgroundStyle:backgroundStyle];
     
-    // Drawing code here.
+    NSTableRowView *row = (NSTableRowView*)self.superview;
+    if (row.isSelected) {
+        self.versionTextField.textColor = [NSColor whiteColor];
+    } else {
+        self.versionTextField.textColor = [NSColor secondaryLabelColor];
+    }
 }
 
 @end

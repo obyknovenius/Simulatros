@@ -82,6 +82,7 @@
     
     self.outletView.floatsGroupRows = NO;
     self.outletView.indentationPerLevel = 0.0f;
+    [self.outletView expandItem:self.simulators];
 }
 
 #pragma mark - Outline data source
@@ -120,7 +121,11 @@
         Simulator *simulator = (Simulator *)item;
         Runtime *runtime = self.runtimes[simulator.runtime];
         cell.nameTextField.stringValue = simulator.name;
-        cell.nameTextField.stringValue = [NSString stringWithFormat:@"%@ (%@)", simulator.name, runtime.buildVersion];
+        if (runtime) {
+            cell.versionTextField.stringValue = [NSString stringWithFormat:@"%@ (%@)", runtime.version, runtime.buildVersion];
+        } else {
+            cell.versionTextField.stringValue = @"No runtime";
+        }
         return cell;
     }
     
@@ -132,6 +137,10 @@
         return YES;
     }
     
+    return NO;
+}
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView shouldShowOutlineCellForItem:(id)item {
     return NO;
 }
 
