@@ -10,13 +10,13 @@
 
 #import "SimulatorCell.h"
 
-#import "Simulator.h"
-#import "Runtime.h"
+#import "SimDeviceSet.h"
+#import "SimDevice.h"
+#import "SimRuntime.h"
 
 @interface SimulatorListViewController () <NSOutlineViewDataSource, NSOutlineViewDelegate>
 
-@property (nonatomic, strong) NSArray *simulators;
-@property (nonatomic, strong) NSDictionary *runtimes;
+@property (nonatomic, strong) NSArray *devices;
 
 @property (weak) IBOutlet NSOutlineView *outletView;
 
@@ -27,62 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    // Getting simulators
-    NSString *userLibraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *devicesPath = [userLibraryPath stringByAppendingPathComponent:@"Developer/CoreSimulator/Devices"];
-    
-    NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtPath:devicesPath];
-    
-    NSMutableArray *simulators = [[NSMutableArray alloc] init];
-    NSString *path;
-    while (path = [enumerator nextObject]) {
-        NSString *simulatorPath = [devicesPath stringByAppendingPathComponent:path];
-        BOOL isDir;
-        if ([fileManager fileExistsAtPath:simulatorPath isDirectory:&isDir] && isDir) {
-            NSString *plistPath = [simulatorPath stringByAppendingPathComponent:@"device.plist"];
-            if ([fileManager fileExistsAtPath:plistPath]) {
-                Simulator *simulator = [[Simulator alloc] initWithDictionary:[NSDictionary dictionaryWithContentsOfFile:plistPath]];
-                simulator.path = simulatorPath;
-                [simulators addObject:simulator];
-            }
-        }
-    }
-    
-    self.simulators = [simulators copy];
-    
-    NSMutableDictionary *runtimes = [[NSMutableDictionary alloc] init];
-    for (Runtime *runtime in [Runtime supportedRuntimes]) {
-        [runtimes setObject:runtime forKey:runtime.identifier];
-    }
-    self.runtimes = [runtimes copy];
-    
-//    // Getting runtimes
-//    NSString *runtimesPath = @"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/CoreSimulator/Profiles/Runtimes";
-//    
-//    NSArray *runtimePathes = [fileManager contentsOfDirectoryAtPath:runtimesPath error:nil];
-//    
-//    NSMutableArray *runtimes = [[NSMutableArray alloc] init];
-//    
-//    for (NSString *subpath in runtimePathes) {
-//        NSString *runtimePath = [runtimesPath stringByAppendingPathComponent:subpath];
-//        
-//        NSBundle *bundle = [NSBundle bundleWithPath:runtimePath];
-//        NSDictionary *bundleInfo = [bundle infoDictionary];
-//        
-//        Runtime *runtime = [[Runtime alloc] init];
-//        runtime.bundleIdentifier = bundleInfo[@"CFBundleIdentifier"];
-//        runtime.bundleName = bundleInfo[@"CFBundleName"];
-//        
-//        [runtimes addObject:runtime];
-//    }
-//    
-//    _runtimes = runtimes;
+    SimDeviceSet *deviceSet = [SimDeviceSet defaultSet];
+    self.devices = [deviceSet devices];
     
     self.outletView.floatsGroupRows = NO;
     self.outletView.indentationPerLevel = 0.0f;
-    [self.outletView expandItem:self.simulators];
+    [self.outletView expandItem:self.devices];
 }
 
 #pragma mark - Outline data source
@@ -92,19 +42,19 @@
         return 1;
     }
     
-    return [self.simulators count];
+    return [self.devices count];
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item {
     if (!item) {
-        return self.simulators;
+        return self.devices;
     }
     
-    return self.simulators[index];
+    return self.devices[index];
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
-    if (item == self.simulators) {
+    if (item == self.devices) {
         return YES;
     }
     
@@ -112,17 +62,18 @@
 }
 
 - (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item {
-    if (item == self.simulators) {
+    if (item == self.devices) {
         NSTableCellView *cell = [outlineView makeViewWithIdentifier:@"HeaderCell" owner:self];
         cell.textField.stringValue = @"SIMULATORS";
         return cell;
     } else {
+        SimDevice *device = (SimDevice *)item;
+        SimRuntime *runtime = device.runtime;
+        
         SimulatorCell *cell = [outlineView makeViewWithIdentifier:@"SimulatorCell" owner:self];
-        Simulator *simulator = (Simulator *)item;
-        Runtime *runtime = self.runtimes[simulator.runtime];
-        cell.nameTextField.stringValue = simulator.name;
+        cell.nameTextField.stringValue = device.name;
         if (runtime) {
-            cell.versionTextField.stringValue = [NSString stringWithFormat:@"%@ (%@)", runtime.version, runtime.buildVersion];
+            cell.versionTextField.stringValue = [NSString stringWithFormat:@"%@ (%@)", runtime.versionString, runtime.buildVersionString];
         } else {
             cell.versionTextField.stringValue = @"No runtime";
         }
@@ -133,7 +84,7 @@
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item {
-    if (item == self.simulators) {
+    if (item == self.devices) {
         return YES;
     }
     
@@ -145,7 +96,7 @@
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item {
-    if (item == self.simulators) {
+    if (item == self.devices) {
         return NO;
     }
     
@@ -153,7 +104,7 @@
 }
 
 - (CGFloat)outlineView:(NSOutlineView *)outlineView heightOfRowByItem:(id)item {
-    if (item == self.simulators) {
+    if (item == self.devices) {
         return 17.0f;
     }
     

@@ -8,15 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "Simulator.h"
-
-@interface AppDelegate ()
-
-@property (nonatomic, strong) NSArray *runtimes;
-@property (nonatomic, strong) NSArray *simulators;
-
-@end
-
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -30,11 +21,6 @@
         [self.window makeKeyAndOrderFront:self];
     }
     return YES;
-}
-
-- (void)fillSimulators
-{
-    
 }
 
 @end
