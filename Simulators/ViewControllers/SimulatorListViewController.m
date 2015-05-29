@@ -30,6 +30,10 @@
     SimDeviceSet *deviceSet = [SimDeviceSet defaultSet];
     self.devices = [deviceSet devices];
     
+    for (SimDevice *device in self.devices) {
+        NSDictionary *dict = [device installedAppsWithError:nil];
+    }
+    
     self.outletView.indentationPerLevel = 0.0f;
     [self.outletView expandItem:self.devices];
 }
