@@ -12,6 +12,7 @@
 		B76B7C101B0A3A390050CBB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76B7C0F1B0A3A390050CBB9 /* Main.storyboard */; };
 		B78D97341B0B8E5C007ADE32 /* SimulatorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D97331B0B8E5C007ADE32 /* SimulatorListViewController.m */; };
 		B78D97441B0C7489007ADE32 /* SimulatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B78D97421B0C7489007ADE32 /* SimulatorCell.m */; };
+		B79680C51B18678300F862BA /* ApplicationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79680C41B18678300F862BA /* ApplicationListViewController.m */; };
 		B7C630D01B0A3B24001C0CBA /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C630CF1B0A3B24001C0CBA /* MainWindowController.m */; };
 		B7CC4CDE19BDB2C600637D3C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CC4CDD19BDB2C600637D3C /* Cocoa.framework */; };
 		B7CC4CE819BDB2C600637D3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7CC4CE619BDB2C600637D3C /* InfoPlist.strings */; };
@@ -61,6 +62,8 @@
 		B78D97331B0B8E5C007ADE32 /* SimulatorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulatorListViewController.m; sourceTree = "<group>"; };
 		B78D97411B0C7489007ADE32 /* SimulatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatorCell.h; sourceTree = "<group>"; };
 		B78D97421B0C7489007ADE32 /* SimulatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulatorCell.m; sourceTree = "<group>"; };
+		B79680C31B18678300F862BA /* ApplicationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationListViewController.h; sourceTree = "<group>"; };
+		B79680C41B18678300F862BA /* ApplicationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationListViewController.m; sourceTree = "<group>"; };
 		B7C630CE1B0A3B24001C0CBA /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		B7C630CF1B0A3B24001C0CBA /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		B7CC4CDA19BDB2C600637D3C /* Simulators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulators.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +140,8 @@
 			children = (
 				B78D97321B0B8E5C007ADE32 /* SimulatorListViewController.h */,
 				B78D97331B0B8E5C007ADE32 /* SimulatorListViewController.m */,
+				B79680C31B18678300F862BA /* ApplicationListViewController.h */,
+				B79680C41B18678300F862BA /* ApplicationListViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7C630D01B0A3B24001C0CBA /* MainWindowController.m in Sources */,
+				B79680C51B18678300F862BA /* ApplicationListViewController.m in Sources */,
 				B7CC4CF119BDB2C600637D3C /* AppDelegate.m in Sources */,
 				B78D97441B0C7489007ADE32 /* SimulatorCell.m in Sources */,
 				B7CC4CEA19BDB2C600637D3C /* main.m in Sources */,

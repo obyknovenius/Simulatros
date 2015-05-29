@@ -30,7 +30,6 @@
     SimDeviceSet *deviceSet = [SimDeviceSet defaultSet];
     self.devices = [deviceSet devices];
     
-    self.outletView.floatsGroupRows = NO;
     self.outletView.indentationPerLevel = 0.0f;
     [self.outletView expandItem:self.devices];
 }
